@@ -13,6 +13,7 @@
           isError: this.isError,
           isDisabled: this.isDisabled,
           placeholder: this.placeholder,
+          isFluid: this.isFluid,
           filterPredicate: this.filterPredicate
         },
         on: {
@@ -36,6 +37,9 @@
       },
       selectedItem: {
         type: Object
+      },
+      isFluid: {
+        type: Boolean
       }
     },
     computed: {

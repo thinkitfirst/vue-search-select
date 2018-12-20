@@ -1,6 +1,5 @@
 <template>
-  <div class="ui fluid search selection dropdown"
-       :class="{ 'active visible':showMenu, 'error': isError, 'disabled': isDisabled }"
+  <div :class="['ui', { 'fluid':isFluid }, 'search selection dropdown', { 'active visible':showMenu, 'error': isError, 'disabled': isDisabled }]"
        @click="openOptions"
        @focus="openOptions">
     <i class="dropdown icon"></i>
@@ -53,6 +52,10 @@
       selectedOption: {
         type: Object,
         default: () => { return { value: '', text: '' } }
+      },
+      isFluid: {
+        type: Boolean,
+        default: true
       }
     },
     data () {
